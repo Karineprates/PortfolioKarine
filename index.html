@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Karine</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;900&display=swap" rel="stylesheet">
+<script src="script.js" defer></script>
+
+</head>
+<body>
+<main>
+    <header>
+    <img src="/img/Frame 1 (3).png" alt="Logo Karine prates">         
+    <nav>
+        <ul>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#especialidades">Formação</a></li>
+        <li><a href="#forms">Contato</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div class="pagOne" id="sobre">
+    <img  id="foto-perfil" src="img/profile2.jpeg" alt="Foto de Karine prates">
+    <div class="containerOne">
+    <h1>Sobre mim</h1>
+    <p>Olá! Meu nome é Karine e sou estudante de Engenharia de Software. Sempre gostei da tecnologia desde nova e, ao longo dessa jornada, desenvolvi uma verdadeira paixão pelo poder que a programação tem de transformar ideias em realidade. Estou sempre em busca de novos desafios e oportunidades para aprender e crescer na área.</p>
+    <img  id="arrow"  src="img/Group 24.svg" alt="seta">
+</div>
+</div>
+    <section id="projetos">
+        <h1>PROJETOS</h1>
+    <div class="container">
+    <div  onclick="abreJanelaOne()" class="first">
+    <img src="img Projeto/Blog gatos.png" alt="foto projeto blog">
+    <h1>Blog dos gatos</h1>
+    <p>Blog desenvolvido com HTML e CSS durante o curso da Rocketseat. O projeto conta com layout responsivo, cores personalizadas, tipografia clara e interações visuais suaves, oferecendo uma experiência de navegação agradável e organizada..</p>
+    </div>
+    <div  onclick="abreJanelaTwo()"  class="first">
+    <img src="/img Projeto/Github Favorites.png" alt="foto projeto github favorites">
+    <h1>Github Favorites</h1>
+    <p>GitHub Favorites é uma aplicação interativa que integra dados em tempo real usando APIs. Desenvolvido com princípios de orientação a objetos, o código é limpo, modular e fácil de manter. Utilizando LocalStorage, a aplicação permite salvar informações localmente, oferecendo uma experiência personalizada ao usuário.</p>
+    </div>
+    <div   onclick="abreJanelaThree()"  class="first">
+    <img src="/img Projeto/Rocketnodes.png" alt="foto projeto rocketnotes">
+    <h1>Rocketnotes</h1>
+    <p>RocketNotes é uma aplicação React construída com Vite, Styled Components e Context API. Cada funcionalidade foi organizada em componentes separados e com rotas dinâmicas, garantindo código modular, fácil manutenção e navegação fluida. O projeto permite que usuários criem conta, façam login, adicionem novas notas e pesquisem suas anotações de forma rápida.</p>
+    </div>
+    <div  onclick="abreJanelaFour()"   class="first">
+    <img src="/img Projeto/Todo.png" alt="foto projeto to-do">
+    <h1>To-do list</h1>
+    <p>To-Do List desenvolvido com React, estruturado em componentes reutilizáveis (Button, Header, Input e Task). O projeto permite adicionar, listar e gerenciar tarefas de forma simples e prática. A aplicação utiliza estilização modular com CSS Modules, garantindo organização e facilidade de manutenção, além de oferecer uma interface limpa e responsiva.</p>
+    </div>
+</div>
+</section>
+
+</main>
+<section class="especialidades" id="especialidades">
+    <div class="interface">
+        <h2>LINGUAGENS</h2>
+        <div class="flex">
+        <div class="especialidades-box" data-linguagem="javascript">
+            <img src="icons/icons8-javascript-96.png" alt="javascript">
+            <h3>JavaScript</h3>
+            <p class="curso-info">Rocketseat</p>
+            <div class="stars">★★★★★</div>
+            <span class="curso-duracao">Abril 2024</span>
+        </div>
+        <div class="especialidades-box" data-linguagem="nodejs">
+            <img src="icons/icons8-nodejs-96.png" alt="nodejs">
+            <h3>Nodejs</h3>
+            <p class="curso-info">Backend - Rocketseat</p>
+            <div class="stars">★★★★☆</div>
+            <span class="curso-duracao">Abril 2024</span>
+        </div>
+        <div class="especialidades-box" data-linguagem="react">
+            <img src="icons/icons8-react-80.png" alt="react">
+            <h3>React</h3>
+            <p class="curso-info">Frontend - Rocketseat</p>
+            <div class="stars">★★★★☆</div>
+            <span class="curso-duracao">Junho 2024</span>
+        </div>
+        <div class="especialidades-box"data-linguagem="html">
+            <img src="icons/icons8-html-96.png" alt="html">
+            <h3>HTML</h3>
+            <p class="curso-info">Rocketseat</p>
+            <div class="stars">★★★★★</div>
+            <span class="curso-duracao">Abril 2024</span>
+        </div>
+        <div class="especialidades-box"data-linguagem="css">
+            <img src="icons/icons8-css3-96.png" alt="css">
+            <h3>CSS</h3>
+            <p class="curso-info">Rocketseat</p>
+            <div class="stars">★★★★★</div>
+            <span class="curso-duracao">Abril 2024</span>
+        </div>
+        <div class="especialidades-box"data-linguagem="python">
+            <img src="icons/icons8-python-96.png" alt="python">
+            <h3>Python</h3>
+            <p class="curso-info">Curso em andamento + Faculdade</p>
+            <div class="stars">★★★★☆</div>
+            <span class="curso-duracao">Em andamento</span>
+        </div>
+
+        </div>
+    </div>
+</section>
+
+<form  id="forms" action="https://formspree.io/f/mnngozbw" method="POST">
+<fieldset >
+    <div class="fieldset-wrapper">
+    <legend>Entre em contato</legend>
+    <div class="input-wrapper"> 
+    <input id="input-name"  name="name" type="text" placeholder="Seu nome" > 
+    </div>
+    <div class="input-wrapper"> 
+    <input  id="input-email"  name="email"   type="email" placeholder="Email">
+    </div>
+    <div class="input-text"> 
+    <textarea  id="textarea"  name="message"  placeholder="Digite sua mensagem aqui..."></textarea>
+    </div>
+    <button>Enviar Mensagem</button>
+</div> 
+</fieldset>
+</form>
+
+
+<footer>
+<p>© 2025 Karine Prates - Todos os direitos reservados</p>
+
+</footer>
+</body>
+</html>
