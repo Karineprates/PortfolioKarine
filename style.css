@@ -287,6 +287,13 @@ button {
   margin-bottom: 6.5rem;
   }
 
+  #buttonOne{
+    width: 20.0rem;
+    font-size: 1.8rem;
+    padding: 3rem;
+
+  }
+
   button:hover{
   background: linear-gradient(96deg, #514fc7 0%, #2b266c 99.68%);
   cursor: pointer;
