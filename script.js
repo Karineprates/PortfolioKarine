@@ -13,11 +13,61 @@ document.querySelectorAll('nav a').forEach(link => {
   });
 });
 
-// Fun√ß√£o gen√©rica para abrir links em nova janela
+const carousels = document.querySelectorAll('.projects-carousel, .languages-carousel');
+
+carousels.forEach((carousel) => {
+  const viewport = carousel.querySelector('.carousel-viewport');
+  const track = carousel.querySelector('.carousel-track');
+  const prevBtn = carousel.querySelector('.carousel-button--prev');
+  const nextBtn = carousel.querySelector('.carousel-button--next');
+  const cards = Array.from(track?.querySelectorAll('.project-card, .language-card') || []);
+
+  if (!viewport || !track || !prevBtn || !nextBtn || cards.length === 0) {
+    return;
+  }
+
+  const gapValue = parseFloat(getComputedStyle(track).gap) || 0;
+  const step = () => {
+    const card = cards[0];
+    return card ? card.getBoundingClientRect().width + gapValue : viewport.clientWidth;
+  };
+
+  const updateButtons = () => {
+    const maxScroll = track.scrollWidth - viewport.clientWidth;
+    prevBtn.disabled = viewport.scrollLeft <= 0;
+    nextBtn.disabled = viewport.scrollLeft >= maxScroll - 1;
+  };
+
+  prevBtn.addEventListener('click', () => {
+    viewport.scrollBy({ left: -step(), behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    viewport.scrollBy({ left: step(), behavior: 'smooth' });
+  });
+
+  viewport.addEventListener('scroll', () => {
+    window.requestAnimationFrame(updateButtons);
+  });
+
+  window.addEventListener('resize', () => {
+    window.requestAnimationFrame(updateButtons);
+  });
+
+  track.addEventListener('click', (event) => {
+    const card = event.target.closest('.project-card');
+    if (card?.dataset.url) {
+      abreJanela(card.dataset.url);
+    }
+  });
+
+  updateButtons();
+});
+
+// FunÁ„o genÈrica para abrir links em nova janela
 function abreJanela(url) {
   const largura = screen.width;
   const altura = screen.height;
-
   window.open(
     url,
     '_blank',
@@ -25,7 +75,7 @@ function abreJanela(url) {
   );
 }
 
-// Fun√ß√µes espec√≠ficas (se quiser manter nomes separados)
+// FunÁıes especÌficas para os projetos
 function abreJanelaOne() {
   abreJanela('https://github.com/Karineprates/blog-gatos');
 }
@@ -38,36 +88,36 @@ function abreJanelaThree() {
 function abreJanelaFour() {
   abreJanela('https://github.com/Karineprates/To-do-list');
 }
+function abreJanelaFive() {
+  abreJanela('https://github.com/Karineprates/FinanceAI');
+}
+function abreJanelaSix() {
+  abreJanela('https://github.com/Karineprates/weather_pipeline');
+}
 
 const form = document.getElementById('forms');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-
   const formData = new FormData(form);
-
   try {
     const response = await fetch(form.action, {
       method: form.method,
       body: formData,
       headers: {
-        'Accept': 'application/json'   // ‚úÖ n√£o use Content-Type aqui
+        'Accept': 'application/json'
       }
     });
-
     if (response.ok) {
-      alert('‚úÖ Mensagem enviada com sucesso!');
+      alert('Mensagem enviada com sucesso!');
       form.reset();
     } else {
       const data = await response.json();
       console.error('Erro do Formspree:', data);
-      alert('‚ùå Erro: ' + (data.error || 'Verifique os campos.'));
+      alert('Erro: ' + (data.error || 'Verifique os campos.'));
     }
   } catch (err) {
     console.error('Erro de rede:', err);
-    alert('‚ùå Erro de rede ou CORS.');
+    alert('Erro de rede ou CORS.');
   }
 });
-
-
-

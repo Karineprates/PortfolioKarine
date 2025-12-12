@@ -138,6 +138,168 @@ width: 40rem;
 
 }
 
+.projects-carousel {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+padding: 3rem 1.5rem;
+max-width: 120rem;
+margin: 0 auto;
+}
+
+.carousel-viewport {
+overflow: hidden;
+width: min(90vw, 110rem);
+margin: 0 auto;
+}
+
+.carousel-track {
+display: flex;
+gap: 2.5rem;
+scroll-behavior: smooth;
+}
+
+ .project-card,
+.language-card {
+min-width: 28rem;
+max-width: 30rem;
+background: #fff;
+border-radius: 2rem;
+padding: 2.6rem 2.4rem;
+box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1.2rem;
+cursor: pointer;
+}
+
+.project-card img {
+width: 9rem;
+height: 9rem;
+object-fit: contain;
+border-radius: 1.6rem;
+}
+
+.project-card h3 {
+color: #B52184;
+font-size: 2.3rem;
+margin: 0;
+}
+
+.project-card p {
+color: #312D64;
+font-size: 1.5rem;
+font-weight: 600;
+line-height: 1.6;
+text-align: center;
+max-width: 26rem;
+margin: 0 auto;
+min-height: 5rem;
+}
+
+.language-card img {
+width: 8rem;
+height: 8rem;
+object-fit: contain;
+border-radius: 1.2rem;
+}
+
+.language-card .curso-info {
+font-size: 1.4rem;
+font-weight: 600;
+}
+
+.language-card .stars {
+display: flex;
+gap: 0.35rem;
+justify-content: center;
+font-size: 0;
+margin: 0;
+}
+
+.language-card .star-icon {
+width: 2.4rem;
+height: 2.4rem;
+fill: #F147C1;
+}
+
+.carousel-button {
+border: none;
+background: #B52184;
+color: #fff;
+width: 4.6rem;
+height: 4.6rem;
+border-radius: 50%;
+font-size: 2.4rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.carousel-button:disabled {
+opacity: 0.4;
+cursor: default;
+}
+
+.languages-carousel {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+padding: 3.5rem 1.5rem;
+max-width: 110rem;
+margin: 0 auto;
+}
+
+.languages-carousel .carousel-viewport {
+overflow: hidden;
+width: min(85vw, 95rem);
+margin: 0 auto;
+}
+
+.languages-carousel .carousel-track {
+display: flex;
+gap: 2rem;
+scroll-behavior: smooth;
+}
+
+.language-card {
+min-width: 24rem;
+max-width: 26rem;
+background: #fff;
+border-radius: 2rem;
+padding: 2.6rem 2.4rem;
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+}
+
+.language-card img {
+width: 8rem;
+height: 8rem;
+object-fit: contain;
+border-radius: 1.2rem;
+}
+
+.language-card .stars {
+font-size: 2.4rem;
+color: #F147C1;
+margin-top: 0.5rem;
+}
+
+.language-card .curso-info {
+font-size: 1.4rem;
+font-weight: 600;
+}
+
 .first:hover{
     transform: translateY(-1rem);
     transition: 0.3s;

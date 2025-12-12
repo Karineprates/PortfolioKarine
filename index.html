@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
@@ -35,79 +35,136 @@
 </div>
 </div>
     <section id="projetos">
-        <h2>PROJETOS</h1>
-    <div class="container">
-    <div  onclick="abreJanelaOne()" class="first">
-    <img src="img-projeto/blog-gatos.png" alt="foto projeto blog">
-    <h1>Blog dos gatos</h1>
-    <p>Blog desenvolvido com HTML e CSS durante o curso da Rocketseat. O projeto conta com layout responsivo, cores personalizadas, tipografia clara e interações visuais suaves, oferecendo uma experiência de navegação agradável e organizada..</p>
-    </div>
-    <div  onclick="abreJanelaTwo()"  class="first">
-    <img src="img-projeto/github-favorites.png" alt="foto projeto github favorites">
-    <h1>Github Favorites</h1>
-    <p>GitHub Favorites é uma aplicação interativa que integra dados em tempo real usando APIs. Desenvolvido com princípios de orientação a objetos, o código é limpo, modular e fácil de manter. Utilizando LocalStorage, a aplicação permite salvar informações localmente, oferecendo uma experiência personalizada ao usuário.</p>
-    </div>
-    <div   onclick="abreJanelaThree()"  class="first">
-    <img src="img-projeto/rocketnodes.png" alt="foto projeto rocketnotes">
-    <h1>Rocketnotes</h1>
-    <p>RocketNotes é uma aplicação React construída com Vite, Styled Components e Context API. Cada funcionalidade foi organizada em componentes separados e com rotas dinâmicas, garantindo código modular, fácil manutenção e navegação fluida. O projeto permite que usuários criem conta, façam login, adicionem novas notas e pesquisem suas anotações de forma rápida.</p>
-    </div>
-    <div  onclick="abreJanelaFour()"   class="first">
-    <img src="img-projeto/todo.png" alt="foto projeto to-do">
-    <h1>To-do list</h1>
-    <p>To-Do List desenvolvido com React, estruturado em componentes reutilizáveis (Button, Header, Input e Task). O projeto permite adicionar, listar e gerenciar tarefas de forma simples e prática. A aplicação utiliza estilização modular com CSS Modules, garantindo organização e facilidade de manutenção, além de oferecer uma interface limpa e responsiva.</p>
-    </div>
-</div>
-</section>
+        <h2>PROJETOS</h2>
+        <div class="projects-carousel">
+            <button type="button" class="carousel-button carousel-button--prev" aria-label="Projetos anteriores">‹</button>
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <article class="project-card" data-url="https://github.com/Karineprates/FinanceAI">
+                        <img src="img-projeto/financeai-dashboard.png" alt="foto projeto FinanceAI">
+                        <h3>FinanceAI</h3>
+                        <p>FinanceAI combina Python e machine learning para alertas financeiros automáticos.</p>
+                    </article>
+                    <article class="project-card" data-url="https://github.com/Karineprates/weather_pipeline">
+                        <img src="img-projeto/weather-dashboard.png" alt="foto projeto Weather Pipeline">
+                        <h3>Weather Pipeline</h3>
+                        <p>Pipeline meteorológico com Airflow alimentando dashboards e alertas climáticos.</p>
+                    </article>
+                    <article class="project-card" data-url="https://github.com/Karineprates/blog-gatos">
+                        <img src="img-projeto/blog-gatos.png" alt="foto projeto blog">
+                        <h3>Blog dos gatos</h3>
+                        <p>Blog criado com HTML e CSS durante o curso da Rocketseat, com layout responsivo e animações suaves.</p>
+                    </article>
+                    <article class="project-card" data-url="https://github.com/Karineprates/DesafioGitFavorites">
+                        <img src="img-projeto/github-favorites.png" alt="foto projeto github favorites">
+                        <h3>Github Favorites</h3>
+                        <p>Aplicação que salva favoritos usando APIs e LocalStorage mantendo código limpo e modular.</p>
+                    </article>
+                    <article class="project-card" data-url="https://github.com/Karineprates/Front-end-rocketnotes">
+                        <img src="img-projeto/rocketnodes.png" alt="foto projeto rocketnotes">
+                        <h3>Rocketnotes</h3>
+                        <p>App React criado com Vite, Styled Components e Context API para organizar anotações.</p>
+                    </article>
+                    <article class="project-card" data-url="https://github.com/Karineprates/To-do-list">
+                        <img src="img-projeto/todo.png" alt="foto projeto to-do">
+                        <h3>To-do list</h3>
+                        <p>Lista de tarefas em React com componentes reutilizáveis e CSS Modules para melhor experiência.</p>
+                    </article>
+                </div>
+            </div>
+            <button type="button" class="carousel-button carousel-button--next" aria-label="Próximos projetos">›</button>
+        </div>
+    </section>
 
 </main>
 <section class="especialidades" id="especialidades">
     <div class="interface">
         <h2>LINGUAGENS</h2>
-        <div class="flex">
-        <div class="especialidades-box" data-linguagem="javascript">
-            <img src="icons/icons8-javascript-96.png" alt="javascript">
-            <h3>JavaScript</h3>
-            <p class="curso-info">Rocketseat</p>
-            <div class="stars">★★★★★</div>
-            <span class="curso-duracao">Abril 2024</span>
-        </div>
-        <div class="especialidades-box" data-linguagem="nodejs">
-            <img src="icons/icons8-nodejs-96.png" alt="nodejs">
-            <h3>Nodejs</h3>
-            <p class="curso-info">Backend - Rocketseat</p>
-            <div class="stars">★★★★☆</div>
-            <span class="curso-duracao">Abril 2024</span>
-        </div>
-        <div class="especialidades-box" data-linguagem="react">
-            <img src="icons/icons8-react-80.png" alt="react">
-            <h3>React</h3>
-            <p class="curso-info">Frontend - Rocketseat</p>
-            <div class="stars">★★★★☆</div>
-            <span class="curso-duracao">Junho 2024</span>
-        </div>
-        <div class="especialidades-box"data-linguagem="html">
-            <img src="icons/icons8-html-96.png" alt="html">
-            <h3>HTML</h3>
-            <p class="curso-info">Rocketseat</p>
-            <div class="stars">★★★★★</div>
-            <span class="curso-duracao">Abril 2024</span>
-        </div>
-        <div class="especialidades-box"data-linguagem="css">
-            <img src="icons/icons8-css3-96.png" alt="css">
-            <h3>CSS</h3>
-            <p class="curso-info">Rocketseat</p>
-            <div class="stars">★★★★★</div>
-            <span class="curso-duracao">Abril 2024</span>
-        </div>
-        <div class="especialidades-box"data-linguagem="python">
-            <img src="icons/icons8-python-96.png" alt="python">
-            <h3>Python</h3>
-            <p class="curso-info">Curso em andamento + Faculdade</p>
-            <div class="stars">★★★★☆</div>
-            <span class="curso-duracao">Em andamento</span>
-        </div>
-
+        <div class="languages-carousel">
+            <button type="button" class="carousel-button carousel-button--prev" aria-label="Linguagens anteriores">‹</button>
+            <div class="carousel-viewport">
+                <div class="carousel-track languages-track">
+                    <article class="language-card">
+                        <img src="icons/icons8-javascript-96.png" alt="javascript">
+                        <h3>JavaScript</h3>
+                        <p class="curso-info">Rocketseat</p>
+                        <div class="stars" aria-label="Cinco estrelas">
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <span class="curso-duracao">Abril 2024</span>
+                    </article>
+                    <article class="language-card">
+                        <img src="icons/icons8-nodejs-96.png" alt="nodejs">
+                        <h3>Nodejs</h3>
+                        <p class="curso-info">Backend - Rocketseat</p>
+                        <div class="stars" aria-label="Cinco estrelas">
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <span class="curso-duracao">Abril 2024</span>
+                    </article>
+                    <article class="language-card">
+                        <img src="icons/icons8-react-80.png" alt="react">
+                        <h3>React</h3>
+                        <p class="curso-info">Frontend - Rocketseat</p>
+                        <div class="stars" aria-label="Cinco estrelas">
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <span class="curso-duracao">Junho 2024</span>
+                    </article>
+                    <article class="language-card">
+                        <img src="icons/icons8-html-96.png" alt="html">
+                        <h3>HTML</h3>
+                        <p class="curso-info">Rocketseat</p>
+                        <div class="stars" aria-label="Cinco estrelas">
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <span class="curso-duracao">Abril 2024</span>
+                    </article>
+                    <article class="language-card">
+                        <img src="icons/icons8-css3-96.png" alt="css">
+                        <h3>CSS</h3>
+                        <p class="curso-info">Rocketseat</p>
+                        <div class="stars" aria-label="Cinco estrelas">
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <span class="curso-duracao">Abril 2024</span>
+                    </article>
+                    <article class="language-card">
+                        <img src="icons/icons8-python-96.png" alt="python">
+                        <h3>Python</h3>
+                        <p class="curso-info">Curso em andamento + Faculdade</p>
+                        <div class="stars" aria-label="Cinco estrelas">
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="star-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                        <span class="curso-duracao">Em andamento</span>
+                    </article>
+                </div>
+            </div>
+            <button type="button" class="carousel-button carousel-button--next" aria-label="Próximas linguagens">›</button>
         </div>
     </div>
 </section>
@@ -132,8 +189,11 @@
 
 
 <footer>
-<p>© 2025 Karine Prates - Todos os direitos reservados</p>
+<p>2025 Karine Prates - Todos os direitos reservados</p>
 
 </footer>
 </body>
 </html>
+
+
+
